@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour
     public int health;
 
     protected Vector3 direction;
-    private TMP_Text healthLabel;
+    protected TMP_Text healthLabel;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
         direction = Vector3.zero - transform.position;
         healthLabel = GetComponentInChildren<TMP_Text>();
