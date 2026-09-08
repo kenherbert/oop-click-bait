@@ -22,20 +22,25 @@ public class Enemy : MonoBehaviour
     {
         Move();
     }
+
     public virtual void Move()
     {
         transform.position += direction.normalized * speed * Time.deltaTime;
     }
 
-    public void ChangeHealth(int diff)
+    public virtual void ChangeHealth(int diff)
     {
         health += diff;
         healthLabel.text = health.ToString();
 
         if (health <= 0)
         {
-            Destroy(this.gameObject);
+            TriggerDeath();
         }
     }
 
+    protected virtual void TriggerDeath()
+    {
+        Destroy(this.gameObject);
+    }
 }

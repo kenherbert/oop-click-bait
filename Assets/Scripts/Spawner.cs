@@ -15,6 +15,11 @@ public class Spawner : MonoBehaviour
         InvokeRepeating("SpawnObject", spawnInitialDelay, spawnRate);
     }
 
+    public void Stop()
+    {
+        CancelInvoke(); //Stop spawning new enemies
+    }
+
     public void SpawnObject()
     {
         Vector3 newPos = Random.insideUnitCircle.normalized * spawnDistance;

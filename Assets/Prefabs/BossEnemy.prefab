@@ -100,3 +100,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossEnemy
   speed: 0.5
   health: 10
+  initialMessage: Time to die, Mr. Blob!
+  loseMessage: Ahahahah, we win again!
